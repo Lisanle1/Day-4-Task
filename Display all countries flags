@@ -1,0 +1,16 @@
+let request=new XMLHttpRequest();
+request.open("GET", " https://restcountries.com/v2/all");
+request.onload= function() {
+    console.log(request.responseText);
+    console.log(request.statusText);
+    let result=JSON.parse(request.responseText);
+    for(let i=0; i<result.length; i++){
+      console.log(result[i].name);  
+      console.log(result[i].flags);
+    }
+}
+request.onerror= function (){
+    console.error("something went wrong");
+}
+
+request.send();
