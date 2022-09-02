@@ -5,7 +5,7 @@ request.onload= function() {
     console.log(request.statusText);
     let result=JSON.parse(request.responseText);
     for(let i=0; i<result.length; i++){
-      console.log(result[i].name);  
+      console.log(result[i].name);    
       console.log(result[i].flags);
     }
 }
