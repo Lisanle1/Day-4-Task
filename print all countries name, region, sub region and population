@@ -1,6 +1,6 @@
 let request=new XMLHttpRequest();
 request.open("GET", "https://restcountries.com/v2/all");
-request.onload= function() {
+request.onload= function() {  
     console.log(request.responseText);
     console.log(request.statusText);
     let result=JSON.parse(request.responseText);
